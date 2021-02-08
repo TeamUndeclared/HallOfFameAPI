@@ -29,9 +29,9 @@ const config = {
 app.use(auth(config));
 
 // req.isAuthenticated is provided from the auth router
-app.get('/', (req, res) => {
-  res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
-});
+// app.get('/', (req, res) => {
+//   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+// });
 
 //app level middleware
 app.use(cors());
@@ -48,6 +48,8 @@ app.use('*', notFoundHandler);
 app.use(errorHandler);
 
 function homehandler(req, res) {
+  console.log(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out')
+  
   res.status(200).send('it\'s AAAALLLLIIIIVVVVEEEEEE');
 }
 
