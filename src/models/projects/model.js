@@ -19,4 +19,7 @@ const trophySchema = mongoose.Schema({
 
 })
 
+const trophyModel = mongoose.model('trophy', trophySchema);
+
+module.exports = trophyModel;
 

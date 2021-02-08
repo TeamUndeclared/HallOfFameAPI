@@ -8,8 +8,8 @@ const morgan = require('morgan');
 //server constants
 const notFoundHandler = require('./error-handling/404');
 const errorHandler = require('./error-handling/500');
-//const authRoutes = require('./auth/routes');
 const v1Routes = require('./routes/v1');
+
 
 const app = express();
 
@@ -20,8 +20,12 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use('./api/v1', v1Routes);
+app.use('/api/v1', v1Routes);
 app.get('/', homehandler);
+
+
+app.use('*', notFoundHandler);
+app.use(errorHandler);
 
 function homehandler(req, res) {
   res.status(200).send('it\'s AAAALLLLIIIIVVVVEEEEEE');

@@ -1,12 +1,38 @@
 'use strict';
 
 //third party dependencies
+
+const fs = require('fs');
 const express = require('express');
 const Collection = require('../models/data-collection')
 
 //server constants
 const router = express.Router();
 
+const models = new Map();
+
+router.param('model', (req, res, next) => {
+  console.log('request', req)
+  const modelName = req.params.model;
+  if (models.has(modelName)) {
+    req.model = models.get(modelName);
+    console.log('model name', modelName)
+    next();
+  } else {
+    const fileName = `${__dirname}/../models/${modelName}/model.js`;
+    console.log('file name', fileName)
+    if (fs.existsSync(fileName)) {
+      const model = require(fileName);
+      models.set(modelName, new Collection(model));
+      req.model = models.get(modelName);
+      next();
+    }
+    else {
+      next('Invalid Model');
+    }
+  }
+});
+console.log("ima a model",models)
 router.get('/:model', handleGetAll);
 router.get('/:model/:id', handleGetOne);
 router.post('/:model', handleCreate);
