@@ -1,0 +1,32 @@
+{
+  "name": "HallOfFameAPI",
+  "version": "1.0.0",
+  "description": "The backend services power the Code Fellows Hall of Fame",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TeamUndeclared/HallOfFameAPI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TeamUndeclared/HallOfFameAPI/issues"
+  },
+  "homepage": "https://github.com/TeamUndeclared/HallOfFameAPI#readme",
+  "dependencies": {
+    "@code-fellows/supergoose": "^1.0.11",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.14.0",
+    "express": "^4.17.1",
+    "jest": "^26.6.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.11.2",
+    "morgan": "^1.10.0",
+    "supertest": "^6.0.1"
+  }
+}
