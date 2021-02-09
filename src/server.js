@@ -9,7 +9,7 @@ const morgan = require('morgan');
 const notFoundHandler = require('./error-handling/404');
 const errorHandler = require('./error-handling/500');
 const v1Routes = require('./routes/v1');
-
+const v2Routes = require('./routes/v2')
 
 const app = express();
 
@@ -41,6 +41,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/v1', v1Routes);
+app.use('/api/v2', requiresAuth(), v2Routes)
 app.get('/', homehandler);
 app.get('/profile', requiresAuth(), (req, res) => {
   res.send(JSON.stringify(req.oidc.user));
