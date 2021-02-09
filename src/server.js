@@ -21,8 +21,8 @@ const config = {
   auth0Logout: true,
   secret: process.env.SECRET,
   baseURL: process.env.BASE_URL,
-  clientID: '76AnvZ4HTAarvu39iYT13UicNgk5NotC',
-  issuerBaseURL: 'https://dev-uhg26xll.us.auth0.com'
+  clientID: process.env.AUTH_CLIENT_ID,
+  issuerBaseURL: process.env.ISSUER_BASE_URL
 };
 
 // auth router attaches /login, /logout, and /callback routes to the baseURL
