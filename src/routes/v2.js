@@ -9,6 +9,21 @@ const Collection = require('../models/data-collection')
 //server constants
 const router = express.Router();
 
+// const { auth, requiresAuth } = require('express-openid-connect');
+
+// const config = {
+//   authRequired: false,
+//   auth0Logout: true,
+//   secret: process.env.SECRET,
+//   baseURL: process.env.BASE_URL,
+//   clientID: process.env.AUTH_CLIENT_ID,
+//   issuerBaseURL: process.env.ISSUER_BASE_URL
+// };
+
+// // auth router attaches /login, /logout, and /callback routes to the baseURL
+// router.use(auth(config));
+
+
 const models = new Map();
 
 router.param('model', (req, res, next) => {
@@ -33,11 +48,11 @@ router.param('model', (req, res, next) => {
   }
 });
 console.log("ima a model",models)
-router.get('/:model', handleGetAll);
-router.get('/:model/:id', handleGetOne);
+//router.get('/:model', handleGetAll);
+//router.get('/:model/:id', handleGetOne);
 router.post('/:model', handleCreate);
-//router.put('/:model/:id', handleUpdate);
-//router.delete('/:model/:id', handleDelete);
+router.put('/:model/:id', handleUpdate);
+router.delete('/:model/:id', handleDelete);
 
 async function handleGetAll(req, res) {
   let allRecords = await req.model.get();
