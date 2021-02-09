@@ -18,7 +18,8 @@ const trophySchema = mongoose.Schema({
   tags: { type: Array, required: false },
   postedBy:{type: String, required: true},
   upVotedBy:{type: Array, required:false},
-  approved:{type:Boolean,required:false}
+  approved:{type:Boolean,required:false},
+  courseLevel:{type:String,required:true}
 })
 
 const trophyModel = mongoose.model('trophy', trophySchema);
