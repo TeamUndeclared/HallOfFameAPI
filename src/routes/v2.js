@@ -48,8 +48,8 @@ router.param('model', (req, res, next) => {
   }
 });
 console.log("ima a model",models)
-//router.get('/:model', handleGetAll);
-//router.get('/:model/:id', handleGetOne);
+router.get('/:model', handleGetAll);
+router.get('/:model/:id', handleGetOne);
 router.post('/:model', handleCreate);
 router.put('/:model/:id', handleUpdate);
 router.delete('/:model/:id', handleDelete);

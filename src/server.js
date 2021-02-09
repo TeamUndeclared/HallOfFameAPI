@@ -41,7 +41,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/v1', v1Routes);
-app.use('/api/v2', requiresAuth(), v2Routes)
+app.use('/api/v2', v2Routes)
 app.get('/', homehandler);
 app.get('/profile', requiresAuth(), (req, res) => {
   res.send(JSON.stringify(req.oidc.user));

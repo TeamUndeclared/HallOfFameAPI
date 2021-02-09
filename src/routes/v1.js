@@ -36,8 +36,8 @@ console.log("ima a model",models)
 router.get('/:model', handleGetAll);
 router.get('/:model/:id', handleGetOne);
 router.post('/:model', handleCreate);
-//router.put('/:model/:id', handleUpdate);
-//router.delete('/:model/:id', handleDelete);
+router.put('/:model/:id', handleUpdate);
+router.delete('/:model/:id', handleDelete);
 
 async function handleGetAll(req, res) {
   let allRecords = await req.model.get();
