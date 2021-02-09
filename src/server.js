@@ -14,7 +14,7 @@ const v1Routes = require('./routes/v1');
 const app = express();
 
 
-const { auth } = require('express-openid-connect');
+const { auth, requiresAuth } = require('express-openid-connect');
 
 const config = {
   authRequired: false,
@@ -42,10 +42,17 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/v1', v1Routes);
 app.get('/', homehandler);
+app.get('/profile', requiresAuth(), (req, res) => {
+  res.send(JSON.stringify(req.oidc.user));
+});
 
 
 app.use('*', notFoundHandler);
 app.use(errorHandler);
+
+
+
+
 
 function homehandler(req, res) {
   console.log(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out')
