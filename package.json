@@ -4,6 +4,7 @@
   "description": "The backend services power the Code Fellows Hall of Fame",
   "main": "index.js",
   "scripts": {
+    "start":"node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

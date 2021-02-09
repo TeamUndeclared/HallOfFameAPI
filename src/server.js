@@ -14,24 +14,24 @@ const v1Routes = require('./routes/v1');
 const app = express();
 
 
-const { auth } = require('express-openid-connect');
+const { auth, requiresAuth } = require('express-openid-connect');
 
 const config = {
   authRequired: false,
   auth0Logout: true,
   secret: process.env.SECRET,
   baseURL: process.env.BASE_URL,
-  clientID: '76AnvZ4HTAarvu39iYT13UicNgk5NotC',
-  issuerBaseURL: 'https://dev-uhg26xll.us.auth0.com'
+  clientID: process.env.AUTH_CLIENT_ID,
+  issuerBaseURL: process.env.ISSUER_BASE_URL
 };
 
 // auth router attaches /login, /logout, and /callback routes to the baseURL
 app.use(auth(config));
 
 // req.isAuthenticated is provided from the auth router
-app.get('/', (req, res) => {
-  res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
-});
+// app.get('/', (req, res) => {
+//   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+// });
 
 //app level middleware
 app.use(cors());
@@ -42,12 +42,21 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/v1', v1Routes);
 app.get('/', homehandler);
+app.get('/profile', requiresAuth(), (req, res) => {
+  res.send(JSON.stringify(req.oidc.user));
+});
 
 
 app.use('*', notFoundHandler);
 app.use(errorHandler);
 
+
+
+
+
 function homehandler(req, res) {
+  console.log(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out')
+  
   res.status(200).send('it\'s AAAALLLLIIIIVVVVEEEEEE');
 }
 
