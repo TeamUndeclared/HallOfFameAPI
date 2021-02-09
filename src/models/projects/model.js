@@ -6,9 +6,9 @@ const  mongoose = require('mongoose');
 const trophySchema = mongoose.Schema({
   
   projectName: { type: String, required: true },
-  authors: { type: String, required: true },
+  authors: { type: Array, required: true },
   description: { type: String, required: true },
-  image: { type: String, required: true },
+  image: { type: Array, required: true },
   productionDate: { type: String, required: true },
   classCode: { type: String, required: true },
   githubRepo: { type: String, required: true },
@@ -16,7 +16,9 @@ const trophySchema = mongoose.Schema({
   isLiveStatus: { type: Boolean, required: true },
   upvotes: { type: Number, required: false },
   tags: { type: Array, required: false },
-
+  postedBy:{type: String, required: true},
+  upVotedBy:{type: Array, required:false},
+  approved:{type:Boolean,required:false}
 })
 
 const trophyModel = mongoose.model('trophy', trophySchema);
