@@ -11,6 +11,8 @@ const notFoundHandler = require('./error-handling/404');
 const errorHandler = require('./error-handling/500');
 const v1Routes = require('./routes/v1');
 const v2Routes = require('./routes/v2');
+const userRoutes = require('./routes/user')
+
 const jwtCheck = require('./auth/jwt-checker');
 
 const app = express();
@@ -22,7 +24,8 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/api/v1', v1Routes);
-app.use('/api/v2', v2Routes)
+app.use('/api/v2', v2Routes);
+app.use(userRoutes)
 app.get('/', homehandler);
 app.get('/profile',jwtCheck, (req, res) => {
   res.send(JSON.stringify(req.oidc.user));
@@ -30,8 +33,6 @@ app.get('/profile',jwtCheck, (req, res) => {
 
 app.use('*', notFoundHandler);
 app.use(errorHandler);
-
-
 
 
 
