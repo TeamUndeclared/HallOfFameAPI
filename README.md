@@ -6,8 +6,8 @@
 
 - MattHudson
 - Garrett Cintron
-- jeremy Penning
-- ricardo Barcenas
+- Jeremy Penning
+- Ricardo Barcenas
 
 ### Links and Resources
 
@@ -44,5 +44,3 @@ you will be able to run tests with the command
 current tests:
 
 #### Referance images
-
-![UML Diagram]()

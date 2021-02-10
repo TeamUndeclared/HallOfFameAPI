@@ -1,9 +1,9 @@
 'use strict';
-
+const UserModel = require('./user-model')
 class DataCollection {
 
-  constructor(model) {
-    this.model = model;
+  constructor() {
+    this.model = UserModel;
   }
 
   get(_id) {
