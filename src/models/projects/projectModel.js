@@ -22,7 +22,7 @@ const projectSchema = mongoose.Schema({
   courseLevel:{type:String,required:true}
 })
 
-const projectModel = mongoose.model('trophy', projectSchema);
+const projectModel = mongoose.model('project', projectSchema);
 
 module.exports = projectModel;
 

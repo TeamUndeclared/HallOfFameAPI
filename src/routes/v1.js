@@ -16,10 +16,6 @@ router.post('/projects', handleCreate);
 router.put('/projects/:id', handleUpdate);
 router.delete('/projects/:id', handleDelete);
 
-
-
-
-
 async function handleGetAll(req, res) {
   let allRecords = await project.get();
   res.status(200).json(allRecords);
@@ -48,6 +44,5 @@ async function handleDelete(req, res) {
   let deletedRecord = await project.delete(id);
   res.status(200).json(deletedRecord);
 }
-
 
 module.exports = router;
