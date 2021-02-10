@@ -12,7 +12,6 @@ const router = express.Router();
 const models = new Map();
 
 router.param('model', (req, res, next) => {
-  console.log('request', req)
   const modelName = req.params.model;
   if (models.has(modelName)) {
     req.model = models.get(modelName);
