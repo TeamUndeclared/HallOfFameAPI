@@ -11,6 +11,7 @@ const router = express.Router();
 const jwtCheck = require('../auth/jwt-checker');
 
 router.get('/projects', handleGetAll);
+router.get('/adminprojects',jwtCheck, handleGetAllAdmin);
 router.get('/projects/:id', handleGetOne);
 router.post('/projects', jwtCheck, handleCreate);
 router.put('/projects/:id',jwtCheck, handleUpdate);
@@ -18,7 +19,12 @@ router.delete('/projects/:id',jwtCheck, handleDelete);
 
 
 async function handleGetAll(req, res) {
-  let allRecords = await project.get();
+  let allRecords = await project.get()
+  res.status(200).json(allRecords);
+}
+
+async function handleGetAllAdmin(req, res) {
+  let allRecords = await project.getAdmin()
   res.status(200).json(allRecords);
 }
 async function handleGetOne(req, res) {
