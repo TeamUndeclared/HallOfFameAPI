@@ -5,7 +5,6 @@
 const express = require('express');
 const project = require('../models/projects/projectCollection')
 
-const project = new ProjectCollection();
 //server constants
 
 const router = express.Router();
