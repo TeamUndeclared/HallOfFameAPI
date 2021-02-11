@@ -8,6 +8,14 @@ class ProjectCollection {
 
   get(_id) {
     if (_id) {
+      return this.model.findOne({ _id },{postedBy:0});
+    }
+    else {
+      return this.model.find({},{postedBy:0});
+    }
+  }
+  getAdmin(_id) {
+    if (_id) {
       return this.model.findOne({ _id });
     }
     else {
