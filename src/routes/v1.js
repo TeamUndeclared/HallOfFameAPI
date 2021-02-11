@@ -3,7 +3,7 @@
 //third party dependencies
 
 const express = require('express');
-const ProjectCollection = require('../models/projects/projectCollection')
+const project = require('../models/projects/projectCollection')
 
 const project = new ProjectCollection();
 //server constants
