@@ -16,24 +16,13 @@ const jwtCheck = require('./auth/jwt-checker');
 
 const app = express();
 
-const { auth, requiresAuth } = require('express-openid-connect');
-
 const config = {
   authRequired: false,
   auth0Logout: true,
-  secret: process.env.SECRET,
   baseURL: process.env.BASE_URL,
-  clientID: '76AnvZ4HTAarvu39iYT13UicNgk5NotC',
   issuerBaseURL: 'https://dev-uhg26xll.us.auth0.com'
 };
 
-// auth router attaches /login, /logout, and /callback routes to the baseURL
-app.use(auth(config));
-
-// req.isAuthenticated is provided from the auth router
-// app.get('/', (req, res) => {
-//   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
-// });
 
 //app level middleware
 app.use(cors());
