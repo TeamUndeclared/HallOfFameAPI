@@ -3,7 +3,7 @@
 
 const  mongoose = require('mongoose');
 
-const trophySchema = mongoose.Schema({
+const projectSchema = mongoose.Schema({
   
   projectName: { type: String, required: true },
   authors: { type: Array, required: true },
@@ -22,7 +22,7 @@ const trophySchema = mongoose.Schema({
   courseLevel:{type:String,required:true}
 })
 
-const trophyModel = mongoose.model('trophy', trophySchema);
+const projectModel = mongoose.model('project', projectSchema);
 
-module.exports = trophyModel;
+module.exports = projectModel;
 

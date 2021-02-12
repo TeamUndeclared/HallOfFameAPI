@@ -5,14 +5,16 @@ const express = require('express');
 const  cors = require('cors');
 const morgan = require('morgan');
 
+
 //server constants
 const notFoundHandler = require('./error-handling/404');
 const errorHandler = require('./error-handling/500');
 const v1Routes = require('./routes/v1');
+const v2Routes = require('./routes/v2');
 
+const jwtCheck = require('./auth/jwt-checker');
 
 const app = express();
-
 
 const { auth, requiresAuth } = require('express-openid-connect');
 
@@ -39,25 +41,22 @@ app.use(morgan('dev'));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
 app.use('/api/v1', v1Routes);
+app.use('/api/v2', v2Routes);
 app.get('/', homehandler);
-app.get('/profile', requiresAuth(), (req, res) => {
+app.get('/profile',jwtCheck, (req, res) => {
   res.send(JSON.stringify(req.oidc.user));
 });
-
 
 app.use('*', notFoundHandler);
 app.use(errorHandler);
 
 
 
-
-
 function homehandler(req, res) {
-  console.log(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out')
-  
-  res.status(200).send('it\'s AAAALLLLIIIIVVVVEEEEEE');
+
+  res.status(200).send('Welcome to Hall of Fame Api a place to store and access archive projects for a full list of functions see the repo on git hub'
+  );
 }
 
 module.exports = {
