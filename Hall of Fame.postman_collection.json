@@ -1,0 +1,827 @@
+{
+	"info": {
+		"_postman_id": "9622e3c3-a6cc-4639-a1ef-2410861875db",
+		"name": "Hall of Fame",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://hall-of-fame-uf-dev.herokuapp.com/",
+					"protocol": "https",
+					"host": [
+						"hall-of-fame-uf-dev",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userprofile",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "tokenName",
+							"value": "Oauth thing.",
+							"type": "string"
+						},
+						{
+							"key": "state",
+							"value": "1234654278",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "openid profile email",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{auth0_client_secret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{auth0_client_id}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://{{auth0_domain}}/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://{{auth0_domain}}/authorize?audience={{auth0_audience}}",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://www.getpostman.com/oauth2/callback",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://hall-of-fame-uf-dev.herokuapp.com/logout",
+					"protocol": "https",
+					"host": [
+						"hall-of-fame-uf-dev",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth Logout",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "tokenName",
+							"value": "Oauth thing.",
+							"type": "string"
+						},
+						{
+							"key": "state",
+							"value": "1234654278",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "openid profile email",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{auth0_client_secret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{auth0_client_id}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://{{auth0_domain}}/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://{{auth0_domain}}/authorize?audience={{auth0_audience}}",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://www.getpostman.com/oauth2/callback",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://hall-of-fame-uf-dev.herokuapp.com/logout",
+					"protocol": "https",
+					"host": [
+						"hall-of-fame-uf-dev",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth Login",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "tokenName",
+							"value": "Oauth thing.",
+							"type": "string"
+						},
+						{
+							"key": "state",
+							"value": "1234654278",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "openid profile email",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{auth0_client_secret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{auth0_client_id}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://{{auth0_domain}}/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://{{auth0_domain}}/authorize?audience={{auth0_audience}}",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://www.getpostman.com/oauth2/callback",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://hall-of-fame-uf-dev.herokuapp.com/login",
+					"protocol": "https",
+					"host": [
+						"hall-of-fame-uf-dev",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v1/Get All Projects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://hall-of-fame-uf-dev.herokuapp.com/api/v1/projects",
+					"protocol": "https",
+					"host": [
+						"hall-of-fame-uf-dev",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v1/Get One Project",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://hall-of-fame-uf-dev.herokuapp.com/api/v1/projects/60230fab2feb7e00157e34b7",
+					"protocol": "https",
+					"host": [
+						"hall-of-fame-uf-dev",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"projects",
+						"60230fab2feb7e00157e34b7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v1/Add to Projects",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"projectName\": \"Project 1\",\n  \"authors\": [\"author1\",\"author2\"],\n  \"description\": \"Tell me a tale about your project i will be a big string. with many sentances and maybe even paragraphs\",\n  \"image\": [\"place.com/screenshot1234\",\"place.com/screenshot1345\",\"place.com/screenshot1245\"],\n  \"productionDate\": \"mm/dd/yyyy\",\n  \"classCode\": \"301d34343\",\n  \"githubRepo\": \"thingatgithub.com\",\n  \"isLiveUrl\": \"nourl.url.com\",\n  \"isLiveStatus\": false,\n  \"upvotes\": 2,\n  \"tags\": [\"tag1\",\"tag2\"],\n  \"postedBy\":\"author1\",\n  \"upVotedBy\":[\"author2\",\"rando3343\"],\n  \"approved\":true,\n  \"courseLevel\":\"301\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hall-of-fame-uf-dev.herokuapp.com/api/v1/projects/",
+					"protocol": "https",
+					"host": [
+						"hall-of-fame-uf-dev",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"projects",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v1/Update a Projects",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"projectName\": \"Project 2\",\n  \"authors\": [\"author1\",\"author2\"],\n  \"description\": \"Tell me a tale about your project i will be a big string. with many sentances and maybe even paragraphs\",\n  \"image\": [\"place.com/screenshot1234\",\"place.com/screenshot4345\",\"place.com/screenshot4245\"],\n  \"productionDate\": \"mm/dd/yyyy\",\n  \"classCode\": \"301d34343\",\n  \"githubRepo\": \"thingatgithub.com\",\n  \"isLiveUrl\": \"nourl.url.com\",\n  \"isLiveStatus\": false,\n  \"upvotes\": 2,\n  \"tags\": [\"tag1\",\"tag2\"],\n  \"postedBy\":\"author1\",\n  \"upVotedBy\":[\"author2\",\"rando3343\"],\n  \"approved\":true,\n  \"courseLevel\":\"301\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hall-of-fame-uf-dev.herokuapp.com/api/v1/projects/6023108e2feb7e00157e34b8",
+					"protocol": "https",
+					"host": [
+						"hall-of-fame-uf-dev",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"projects",
+						"6023108e2feb7e00157e34b8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v1/Delete a Project",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"projectName\": \"Project 2\",\n  \"authors\": [\"author1\",\"author2\"],\n  \"description\": \"Tell me a tale about your project i will be a big string. with many sentances and maybe even paragraphs\",\n  \"image\": [\"place.com/screenshot1234\",\"place.com/screenshot4345\",\"place.com/screenshot4245\"],\n  \"productionDate\": \"mm/dd/yyyy\",\n  \"classCode\": \"301d34343\",\n  \"githubRepo\": \"thingatgithub.com\",\n  \"isLiveUrl\": \"nourl.url.com\",\n  \"isLiveStatus\": false,\n  \"upvotes\": 2,\n  \"tags\": [\"tag1\",\"tag2\"],\n  \"postedBy\":\"author1\",\n  \"upVotedBy\":[\"author2\",\"rando3343\"],\n  \"approved\":true,\n  \"courseLevel\":\"301\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hall-of-fame-uf-dev.herokuapp.com/api/v1/projects/6023108e2feb7e00157e34b8",
+					"protocol": "https",
+					"host": [
+						"hall-of-fame-uf-dev",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"projects",
+						"6023108e2feb7e00157e34b8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v2/Add to Projects",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "tokenName",
+							"value": "Oauth thing.",
+							"type": "string"
+						},
+						{
+							"key": "state",
+							"value": "1234654278",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "openid profile email",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{auth0_client_secret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{auth0_client_id}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://{{auth0_domain}}/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://{{auth0_domain}}/authorize?audience={{auth0_audience}}",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://www.getpostman.com/oauth2/callback",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"projectName\": \"Project 1\",\n  \"authors\": [\"author1\",\"author2\"],\n  \"description\": \"Tell me a tale about your project i will be a big string. with many sentances and maybe even paragraphs\",\n  \"image\": [\"place.com/screenshot1234\",\"place.com/screenshot1345\",\"place.com/screenshot1245\"],\n  \"productionDate\": \"mm/dd/yyyy\",\n  \"classCode\": \"301d34343\",\n  \"githubRepo\": \"thingatgithub.com\",\n  \"isLiveUrl\": \"nourl.url.com\",\n  \"isLiveStatus\": false,\n  \"upvotes\": 2,\n  \"tags\": [\"tag1\",\"tag2\"],\n  \"postedBy\":\"author1\",\n  \"upVotedBy\":[\"author2\",\"rando3343\"],\n  \"approved\":true,\n  \"courseLevel\":\"301\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hall-of-fame-uf-dev.herokuapp.com/api/v2/projects/",
+					"protocol": "https",
+					"host": [
+						"hall-of-fame-uf-dev",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"projects",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v2/Update a Projects",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "tokenName",
+							"value": "Oauth thing.",
+							"type": "string"
+						},
+						{
+							"key": "state",
+							"value": "1234654278",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "openid profile email",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{auth0_client_secret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{auth0_client_id}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://{{auth0_domain}}/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://{{auth0_domain}}/authorize?audience={{auth0_audience}}",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://www.getpostman.com/oauth2/callback",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"projectName\": \"Project 2\",\n  \"authors\": [\"author1\",\"author2\"],\n  \"description\": \"Tell me a tale about your project i will be a big string. with many sentances and maybe even paragraphs\",\n  \"image\": [\"place.com/screenshot1234\",\"place.com/screenshot4345\",\"place.com/screenshot4245\"],\n  \"productionDate\": \"mm/dd/yyyy\",\n  \"classCode\": \"301d34343\",\n  \"githubRepo\": \"thingatgithub.com\",\n  \"isLiveUrl\": \"nourl.url.com\",\n  \"isLiveStatus\": false,\n  \"upvotes\": 2,\n  \"tags\": [\"tag1\",\"tag2\"],\n  \"postedBy\":\"author1\",\n  \"upVotedBy\":[\"author2\",\"rando3343\"],\n  \"approved\":true,\n  \"courseLevel\":\"301\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hall-of-fame-uf-dev.herokuapp.com/api/v2/projects/6023108e2feb7e00157e34b8",
+					"protocol": "https",
+					"host": [
+						"hall-of-fame-uf-dev",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"projects",
+						"6023108e2feb7e00157e34b8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v2/Delete a Project",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "tokenName",
+							"value": "Oauth thing.",
+							"type": "string"
+						},
+						{
+							"key": "state",
+							"value": "1234654278",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "openid profile email",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{auth0_client_secret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{auth0_client_id}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://{{auth0_domain}}/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://{{auth0_domain}}/authorize?audience={{auth0_audience}}",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://www.getpostman.com/oauth2/callback",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"projectName\": \"Project 2\",\n  \"authors\": [\"author1\",\"author2\"],\n  \"description\": \"Tell me a tale about your project i will be a big string. with many sentances and maybe even paragraphs\",\n  \"image\": [\"place.com/screenshot1234\",\"place.com/screenshot4345\",\"place.com/screenshot4245\"],\n  \"productionDate\": \"mm/dd/yyyy\",\n  \"classCode\": \"301d34343\",\n  \"githubRepo\": \"thingatgithub.com\",\n  \"isLiveUrl\": \"nourl.url.com\",\n  \"isLiveStatus\": false,\n  \"upvotes\": 2,\n  \"tags\": [\"tag1\",\"tag2\"],\n  \"postedBy\":\"author1\",\n  \"upVotedBy\":[\"author2\",\"rando3343\"],\n  \"approved\":true,\n  \"courseLevel\":\"301\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hall-of-fame-uf-dev.herokuapp.com/api/v1/projects/6023108e2feb7e00157e34b8",
+					"protocol": "https",
+					"host": [
+						"hall-of-fame-uf-dev",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"projects",
+						"6023108e2feb7e00157e34b8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v2/Get All Projects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://hall-of-fame-uf-dev.herokuapp.com/api/v2/projects",
+					"protocol": "https",
+					"host": [
+						"hall-of-fame-uf-dev",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v2/Get One Project",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://hall-of-fame-uf-dev.herokuapp.com/api/v2/projects/60230fab2feb7e00157e34b7",
+					"protocol": "https",
+					"host": [
+						"hall-of-fame-uf-dev",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"projects",
+						"60230fab2feb7e00157e34b7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v2/search",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://hall-of-fame-uf-dev.herokuapp.com/api/v2/search/classCode?search=301d34343",
+					"protocol": "https",
+					"host": [
+						"hall-of-fame-uf-dev",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"search",
+						"classCode"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "301d34343"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v2/admin projects view",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://hall-of-fame-uf-dev.herokuapp.com/api/v2/adminprojects",
+					"protocol": "https",
+					"host": [
+						"hall-of-fame-uf-dev",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"adminprojects"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "https://hall-of-fame-uf-dev.herokuapp.com/"
+		}
+	]
+}
